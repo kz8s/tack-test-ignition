@@ -1,0 +1,45 @@
+#!/bin/bash -ex
+
+OUTDIR=/etc/kubernetes/ssl
+
+function error {
+  echo "✗ Error on line $1"'!'
+  exit 1
+}
+trap 'error $${LINENO}' ERR
+
+until printf "." && curl -d '{"label":"primary"}' http://pki.${ internal-tld }:8888/api/v1/cfssl/info &>/dev/null
+do sleep 5.2; done; echo "✓"
+
+DNS1="kubernetes"
+DNS2="kubernetes.default"
+DNS3="kubernetes.default.svc"
+DNS4="kubernetes.default.svc.cluster.local"
+DEFAULT_HOSTS="$DNS1,$DNS2,$DNS3,$DNS4,127.0.0.1"
+
+function csr {
+  cat <<EOF
+{"CN":"$1","hosts":[""],"key":{"algo":"rsa","size":2048}}
+EOF
+}
+
+function generate {
+
+  CN=$1
+  PROFILE=$2
+  HOSTS=$3
+
+  echo "$(csr $CN)" \
+    | /opt/bin/cfssl gencert \
+      -remote=pki.${ internal-tld }:8888 \
+      -profile=$PROFILE \
+      -hostname="$HOSTS" - \
+    | /opt/bin/cfssljson -bare $CN
+
+  chmod 0644 $${CN}.pem $${CN}-key.pem
+
+}
+
+mkdir -p $OUTDIR && cd $OUTDIR
+
+generate k8s-bastion client "k8s-bastion"
