@@ -1,0 +1,12 @@
+#!/bin/bash -e
+until /usr/bin/rkt run \
+  --net=host \
+  --trust-keys-from-https \
+  --volume=dns,kind=host,source=/etc/resolv.conf,readOnly=true --mount volume=dns,target=/etc/resolv.conf \
+  --volume=ssl,kind=host,source=/etc/kubernetes/ssl,readOnly=false --mount=volume=ssl,target=/etc/kubernetes/ssl \
+  quay.io/coreos/awscli -- aws s3 cp $1 /etc/kubernetes/ssl
+do
+  echo "retrying"
+  sleep 5.2
+done
+echo "✓"
