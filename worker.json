@@ -1,0 +1,244 @@
+{
+    "ignition": {
+      "version": "2.0.0",
+      "config": {}
+    },
+    "storage": {
+      "filesystems": [
+        {
+          "name": "docker",
+          "mount": {
+            "device": "/dev/xvdf",
+            "format": "ext4",
+            "create": {}
+          }
+        }
+      ],
+      "files": [
+        {
+          "filesystem": "root",
+          "path": "/opt/bin/host-rkt",
+          "contents": {
+            "source": "data:text/plain;charset=utf-8;base64,IyEvYmluL3NoCmV4ZWMgbnNlbnRlciAtbSAtdSAtaSAtbiAtcCAtdCAxIC0tIC91c3IvYmluL3JrdCAiJEAiCg==",
+            "verification": {}
+          },
+          "mode": 493,
+          "user": {},
+          "group": {}
+        },
+        {
+          "filesystem": "root",
+          "path": "/etc/tack-environment",
+          "contents": {
+            "source": "data:text/plain;charset=utf-8;base64,VEFDS19CSU5fRElSPS9vcHQvYmluClRBQ0tfQ0ZTU0xfRElSPS9ldGMvY2Zzc2wKVEFDS19DRlNTTF9VUkw9aHR0cHM6Ly9wa2cuY2Zzc2wub3JnClRBQ0tfQ0ZTU0xfVkVSU0lPTj1SMS4yClRBQ0tfQ0xVU1RFUl9ET01BSU49Y2x1c3Rlci5sb2NhbApUQUNLX0lOVEVSTkFMX1RMRD10ZXN0Lmt6OHMKVEFDS19TM19CVUNLRVQ9a3o4cy1wa2ktdGVzdC05MDQ1NTg1Mzg1OTgtdXMtd2VzdC0yClRBQ0tfU1NMX0RJUj0vZXRjL2t1YmVybmV0ZXMvc3NsClRBQ0tfSFlQRVJLVUJFX0lNQUdFPXF1YXkuaW8vY29yZW9zL2h5cGVya3ViZQpUQUNLX0hZUEVSS1VCRV9UQUc9djEuNi4yX2NvcmVvcy4wClRBQ0tfQ0xVU1RFUl9ETlM9MTAuMy4wLjEwClRBQ0tfQ0xVU1RFUl9DSURSPTEwLjIuMC4wLzE2ClRBQ0tfQVBJU0VSVkVSX1VSTD1odHRwczovL21hc3Rlci50ZXN0Lmt6OHMvCg==",
+            "verification": {}
+          },
+          "mode": 420,
+          "user": {},
+          "group": {}
+        },
+        {
+          "filesystem": "root",
+          "path": "/etc/kubernetes/cni/net.d/10-flannel.conf",
+          "contents": {
+            "source": "data:text/plain;charset=utf-8;base64,ewogICJuYW1lIjogInBvZG5ldCIsCiAgInR5cGUiOiAiZmxhbm5lbCIsCiAgImRlbGVnYXRlIjogewogICAgImlzRGVmYXVsdEdhdGV3YXkiOiB0cnVlCiAgfQp9Cg==",
+            "verification": {}
+          },
+          "user": {},
+          "group": {}
+        },
+        {
+          "filesystem": "root",
+          "path": "/opt/bin/create-certificate",
+          "contents": {
+            "source": "data:text/plain;charset=utf-8;base64,IyEvYmluL2Jhc2ggLWV4CgpmdW5jdGlvbiBlcnJvciB7CiAgZWNobyAi4pyXIEVycm9yIG9uIGxpbmUgJDEiJyEnCiAgZXhpdCAxCn0KdHJhcCAnZXJyb3IgJCR7TElORU5PfScgRVJSCgp1bnRpbCBwcmludGYgIi4iICYmIGN1cmwgLWQgJ3sibGFiZWwiOiJwcmltYXJ5In0nIGh0dHA6Ly9wa2kuJHtUQUNLX0lOVEVSTkFMX1RMRH06ODg4OC9hcGkvdjEvY2Zzc2wvaW5mbyAmPi9kZXYvbnVsbApkbyBzbGVlcCA1LjI7IGRvbmU7IGVjaG8gIuKckyIKCkROUzE9Imt1YmVybmV0ZXMiCkROUzI9Imt1YmVybmV0ZXMuZGVmYXVsdCIKRE5TMz0ia3ViZXJuZXRlcy5kZWZhdWx0LnN2YyIKRE5TND0ia3ViZXJuZXRlcy5kZWZhdWx0LnN2Yy5jbHVzdGVyLmxvY2FsIgpERUZBVUxUX0hPU1RTPSIkRE5TMSwkRE5TMiwkRE5TMywkRE5TNCwxMjcuMC4wLjEiCgpmdW5jdGlvbiBjc3IgewogIGNhdCA8PEVPRgp7IkNOIjoiJDEiLCJob3N0cyI6WyIiXSwia2V5Ijp7ImFsZ28iOiJyc2EiLCJzaXplIjoyMDQ4fX0KRU9GCn0KCmZ1bmN0aW9uIGdlbmVyYXRlIHsKCiAgQ049JDEKICBQUk9GSUxFPSQyCiAgSE9TVFM9JDMKCiAgZWNobyAiJChjc3IgJENOKSIgXAogICAgfCAvb3B0L2Jpbi9jZnNzbCBnZW5jZXJ0IFwKICAgICAgLXJlbW90ZT1wa2kuJHtUQUNLX0lOVEVSTkFMX1RMRH06ODg4OCBcCiAgICAgIC1wcm9maWxlPSRQUk9GSUxFIFwKICAgICAgLWhvc3RuYW1lPSIkSE9TVFMiIC0gXAogICAgfCAvb3B0L2Jpbi9jZnNzbGpzb24gLWJhcmUgJENOCgogIGNobW9kIDA2NDQgJHtDTn0ucGVtICR7Q059LWtleS5wZW0KCn0KCm1rZGlyIC1wICRUQUNLX1NTTF9ESVIgJiYgY2QgJFRBQ0tfU1NMX0RJUgoKZ2VuZXJhdGUgJDEgJDIgJDMKIyBnZW5lcmF0ZSBrOHMtYmFzdGlvbiBjbGllbnQgIms4cy1iYXN0aW9uIgo=",
+            "verification": {}
+          },
+          "mode": 493,
+          "user": {},
+          "group": {}
+        },
+        {
+          "filesystem": "root",
+          "path": "/opt/bin/s3-get",
+          "contents": {
+            "source": "data:text/plain;charset=utf-8;base64,IyEvYmluL2Jhc2ggLWUKdW50aWwgL3Vzci9iaW4vcmt0IHJ1biBcCiAgLS1uZXQ9aG9zdCBcCiAgLS10cnVzdC1rZXlzLWZyb20taHR0cHMgXAogIC0tdm9sdW1lPWRucyxraW5kPWhvc3Qsc291cmNlPS9ldGMvcmVzb2x2LmNvbmYscmVhZE9ubHk9dHJ1ZSAtLW1vdW50IHZvbHVtZT1kbnMsdGFyZ2V0PS9ldGMvcmVzb2x2LmNvbmYgXAogIC0tdm9sdW1lPXNzbCxraW5kPWhvc3Qsc291cmNlPS9ldGMva3ViZXJuZXRlcy9zc2wscmVhZE9ubHk9ZmFsc2UgLS1tb3VudD12b2x1bWU9c3NsLHRhcmdldD0kVEFDS19TU0xfRElSIFwKICBxdWF5LmlvL2NvcmVvcy9hd3NjbGkgLS0gYXdzIHMzIGNwICQxICRUQUNLX1NTTF9ESVIKZG8KICBlY2hvICJyZXRyeWluZyIKICBzbGVlcCA1LjIKZG9uZQplY2hvICLinJMiCg==",
+            "verification": {}
+          },
+          "mode": 493,
+          "user": {},
+          "group": {}
+        },
+        {
+          "filesystem": "root",
+          "path": "/etc/environment",
+          "contents": {
+            "source": "data:text/plain;charset=utf-8;base64,RVRDRF9DQV9GSUxFPS9ldGMva3ViZXJuZXRlcy9zc2wvY2EucGVtCkVUQ0RfQ0VSVF9GSUxFPS9ldGMva3ViZXJuZXRlcy9zc2wvazhzLXdvcmtlci5wZW0KRVRDRF9LRVlfRklMRT0vZXRjL2t1YmVybmV0ZXMvc3NsL2s4cy13b3JrZXIta2V5LnBlbQpFVENEQ1RMX0NBX0ZJTEU9L2V0Yy9rdWJlcm5ldGVzL3NzbC9jYS5wZW0KRVRDRENUTF9DRVJUX0ZJTEU9L2V0Yy9rdWJlcm5ldGVzL3NzbC9rOHMtd29ya2VyLnBlbQpFVENEQ1RMX0tFWV9GSUxFPS9ldGMva3ViZXJuZXRlcy9zc2wvazhzLXdvcmtlci1rZXkucGVtCg==",
+            "verification": {}
+          },
+          "mode": 420,
+          "user": {},
+          "group": {}
+        },
+        {
+          "filesystem": "root",
+          "path": "/etc/kubernetes/kubeconfig.yml",
+          "contents": {
+            "source": "data:text/plain;charset=utf-8;base64,YXBpVmVyc2lvbjogdjEKa2luZDogQ29uZmlnCmNsdXN0ZXJzOgogIC0gbmFtZTogbG9jYWwKICAgIGNsdXN0ZXI6CiAgICAgIGNlcnRpZmljYXRlLWF1dGhvcml0eTogL2V0Yy9rdWJlcm5ldGVzL3NzbC9jYS5wZW0KICAgICAgc2VydmVyOiBodHRwczovL21hc3Rlci50ZXN0Lmt6OHMKdXNlcnM6CiAgLSBuYW1lOiBrdWJlbGV0CiAgICB1c2VyOgogICAgICBjbGllbnQtY2VydGlmaWNhdGU6IC9ldGMva3ViZXJuZXRlcy9zc2wvazhzLXdvcmtlci5wZW0KICAgICAgY2xpZW50LWtleTogL2V0Yy9rdWJlcm5ldGVzL3NzbC9rOHMtd29ya2VyLWtleS5wZW0KY29udGV4dHM6CiAgLSBjb250ZXh0OgogICAgICBjbHVzdGVyOiBsb2NhbAogICAgICB1c2VyOiBrdWJlbGV0CiAgICBuYW1lOiBrdWJlbGV0LWNvbnRleHQKY3VycmVudC1jb250ZXh0OiBrdWJlbGV0LWNvbnRleHQK",
+            "verification": {}
+          },
+          "mode": 420,
+          "user": {},
+          "group": {}
+        },
+        {
+          "filesystem": "root",
+          "path": "/etc/kubernetes/manifests/kube-proxy.yml",
+          "contents": {
+            "source": "data:text/plain;charset=utf-8;base64,YXBpVmVyc2lvbjogdjEKa2luZDogUG9kCm1ldGFkYXRhOgogIG5hbWU6IGt1YmUtcHJveHkKICBuYW1lc3BhY2U6IGt1YmUtc3lzdGVtCnNwZWM6CiAgaG9zdE5ldHdvcms6IHRydWUKICBjb250YWluZXJzOgogIC0gbmFtZToga3ViZS1wcm94eQogICAgaW1hZ2U6IHF1YXkuaW8vY29yZW9zL2h5cGVya3ViZTp2MS42LjJfY29yZW9zLjAKICAgIGNvbW1hbmQ6CiAgICAtIC9oeXBlcmt1YmUKICAgIC0gcHJveHkKICAgIC0gLS1jbHVzdGVyLWNpZHI9MTAuMi4wLjAvMTYKICAgIC0gLS1rdWJlY29uZmlnPS9ldGMva3ViZXJuZXRlcy9rdWJlY29uZmlnLnltbAogICAgLSAtLW1hc3Rlcj1odHRwczovL21hc3Rlci50ZXN0Lmt6OHMKICAgIC0gLS1wcm94eS1tb2RlPWlwdGFibGVzCiAgICAtIC0tbG9ndG9zdGRlcnI9dHJ1ZQogICAgLSAtLXY9NAogICAgc2VjdXJpdHlDb250ZXh0OgogICAgICBwcml2aWxlZ2VkOiB0cnVlCiAgICB2b2x1bWVNb3VudHM6CiAgICAgIC0gbW91bnRQYXRoOiAvZXRjL3NzbC9jZXJ0cwogICAgICAgIG5hbWU6ICJzc2wtY2VydHMiCiAgICAgIC0gbW91bnRQYXRoOiAvZXRjL2t1YmVybmV0ZXMva3ViZWNvbmZpZy55bWwKICAgICAgICBuYW1lOiAia3ViZWNvbmZpZyIKICAgICAgICByZWFkT25seTogdHJ1ZQogICAgICAtIG1vdW50UGF0aDogL2V0Yy9rdWJlcm5ldGVzL3NzbAogICAgICAgIG5hbWU6ICJldGMta3ViZS1zc2wiCiAgICAgICAgcmVhZE9ubHk6IHRydWUKICAgICAgLSBtb3VudFBhdGg6IC92YXIvcnVuL2RidXMKICAgICAgICBuYW1lOiBkYnVzCiAgICAgICAgcmVhZE9ubHk6IGZhbHNlCiAgdm9sdW1lczoKICAgIC0gbmFtZTogInNzbC1jZXJ0cyIKICAgICAgaG9zdFBhdGg6CiAgICAgICAgcGF0aDogIi91c3Ivc2hhcmUvY2EtY2VydGlmaWNhdGVzIgogICAgLSBuYW1lOiAia3ViZWNvbmZpZyIKICAgICAgaG9zdFBhdGg6CiAgICAgICAgcGF0aDogIi9ldGMva3ViZXJuZXRlcy9rdWJlY29uZmlnLnltbCIKICAgIC0gbmFtZTogImV0Yy1rdWJlLXNzbCIKICAgICAgaG9zdFBhdGg6CiAgICAgICAgcGF0aDogIi9ldGMva3ViZXJuZXRlcy9zc2wiCiAgICAtIG5hbWU6IGRidXMKICAgICAgaG9zdFBhdGg6CiAgICAgICAgcGF0aDogIi92YXIvcnVuL2RidXMiCg==",
+            "verification": {}
+          },
+          "mode": 420,
+          "user": {},
+          "group": {}
+        },
+        {
+          "filesystem": "root",
+          "path": "/opt/bin/wait-for-apiserver",
+          "contents": {
+            "source": "data:text/plain;charset=utf-8;base64,IyEvYmluL2Jhc2ggLWUKdW50aWwgY3VybCAtLWluc2VjdXJlICR7VEFDS19BUElTRVJWRVJfVVJMfSAmPi9kZXYvbnVsbApkbwogIGVjaG8gIndhaXRpbmcgZm9yIGFwaXNlcnZlci4uLiIKICBzbGVlcCA1LjIKZG9uZQplY2hvICLinJMiCg==",
+            "verification": {}
+          },
+          "mode": 493,
+          "user": {},
+          "group": {}
+        }
+      ]
+    },
+    "systemd": {
+      "units": [
+        {
+          "name": "var-lib-docker.mount",
+          "enable": true,
+          "contents": "[Mount]\nWhat=/dev/xvdf\nWhere=/var/lib/docker\nType=ext4\n\n[Install]\nWantedBy=local-fs.target\n"
+        },
+        {
+          "name": "flanneld.service",
+          "enable": true,
+          "dropins": [
+            {
+              "name": "10-version.conf",
+              "contents": "[Service]\nEnvironment=\"FLANNEL_IMAGE_TAG=v0.7.1\"\nEnvironment=\"DOCKER_OPT_BIP=\"\nEnvironment=\"DOCKER_OPT_IPMASQ=\"\n"
+            }
+          ]
+        },
+        {
+          "name": "flanneld.service",
+          "enable": true,
+          "dropins": [
+            {
+              "name": "10-version.conf",
+              "contents": "[Service]\nEnvironment=\"FLANNEL_IMAGE_TAG=v0.7.1\"\nEnvironment=\"DOCKER_OPT_BIP=\"\nEnvironment=\"DOCKER_OPT_IPMASQ=\"\n"
+            }
+          ]
+        },
+        {
+          "name": "flanneld.service",
+          "enable": true,
+          "dropins": [
+            {
+              "name": "50-network-config.conf",
+              "contents": "[Unit]\nAfter=create-certificate.service\nAfter=create-certificate.service\n[Service]\nEnvironmentFile=-/etc/environment\nEnvironment=\"ETCD_SSL_DIR=/etc/kubernetes/ssl\"\nRestart=always\nRestartSec=10\n"
+            }
+          ]
+        },
+        {
+          "name": "cfssl-client.service",
+          "enable": true,
+          "contents": "[Unit]\nAfter=network-online.target\nRequires=network-online.target\nDescription=Download cfssl\n\n[Service]\nType=oneshot\nRemainAfterExit=yes\nEnvironmentFile=/etc/tack-environment\nExecStartPre=-/usr/bin/mkdir --parents /opt/bin\nExecStartPre=/usr/bin/curl -L -o ${TACK_BIN_DIR}/cfssl ${TACK_CFSSL_URL}/${TACK_CFSSL_VERSION}/cfssl_linux-amd64\nExecStartPre=/usr/bin/curl -L -o ${TACK_BIN_DIR}/cfssljson ${TACK_CFSSL_URL}/${TACK_CFSSL_VERSION}/cfssljson_linux-amd64\nExecStart=/usr/bin/chmod +x ${TACK_BIN_DIR}/cfssl ${TACK_BIN_DIR}/cfssljson\n\n[Install]\nWantedBy=multi-user.target\n"
+        },
+        {
+          "name": "docker.service",
+          "enable": true,
+          "dropins": [
+            {
+              "name": "40-flannel.conf",
+              "contents": "[Unit]\nAfter=flanneld.service\nRequires=flanneld.service\n[Service]\nRestart=always\nRestartSec=10\n"
+            }
+          ]
+        },
+        {
+          "name": "docker.service",
+          "enable": true,
+          "dropins": [
+            {
+              "name": "60-logfilelimit.conf",
+              "contents": "[Service]\nEnvironment=\"DOCKER_OPTS=--log-opt max-size=50m --log-opt max-file=3\"\n"
+            }
+          ]
+        },
+        {
+          "name": "prefetch-rkt-hyperkube.service",
+          "enable": true,
+          "contents": "[Unit]\nAfter=network-online.target\nRequires=network-online.target\nDescription=Prefetch rkt Hyperkube\n\n[Service]\nType=oneshot\nRemainAfterExit=yes\nExecStartPre=/usr/bin/rkt trust --trust-keys-from-https --prefix=${TACK_HYPERKUBE_IMAGE}\nExecStart=/usr/bin/rkt fetch ${TACK_HYPERKUBE_IMAGE}:${TACK_HYPERKUBE_TAG}\n\n[Install]\nWantedBy=multi-user.target\n"
+        },
+        {
+          "name": "prefetch-docker-hyperkube.service",
+          "enable": true,
+          "contents": "[Unit]\nAfter=docker.service\nRequires=docker.service\nDescription=Prefetch docker Hyperkube\n\n[Service]\nType=oneshot\nRemainAfterExit=yes\nExecStart=/usr/bin/docker pull ${TACK_HYPERKUBE_IMAGE}:${TACK_HYPERKUBE_TAG}\n\n[Install]\nWantedBy=multi-user.target\n"
+        },
+        {
+          "name": "create-certificate.service",
+          "enable": true,
+          "contents": "[Unit]\nAfter=cfssl-client.service\nRequires=cfssl-client.service\n\nDescription=Create certificate\n\n[Service]\nType=oneshot\nRemainAfterExit=yes\nEnvironmentFile=/etc/tack-environment\nExecStartPre=-/usr/bin/mkdir -p ${TACK_SSL_DIR}\nExecStartPre=/opt/bin/s3-get s3://${TACK_S3_BUCKET}/ca.pem\nExecStart=/opt/bin/create-certificate k8s-worker client\n\n[Install]\nWantedBy=multi-user.target\n"
+        },
+        {
+          "name": "locksmithd.service",
+          "enable": true,
+          "dropins": [
+            {
+              "name": "20-locksmithd-config.conf",
+              "contents": "[Service]\nEnvironment=\"LOCKSMITHD_ENDPOINT=https://etcd.test.kz8s:2379\"\nEnvironment=\"LOCKSMITHD_ETCD_CAFILE=/etc/kubernetes/ssl/ca.pem\"\nEnvironment=\"LOCKSMITHD_ETCD_CERTFILE=/etc/kubernetes/ssl/k8s-worker.pem\"\nEnvironment=\"LOCKSMITHD_ETCD_KEYFILE=/etc/kubernetes/ssl/k8s-worker-key.pem\"\n"
+            }
+          ]
+        },
+        {
+          "name": "flanneld.service",
+          "enable": true,
+          "dropins": [
+            {
+              "name": "20-clct-flannel.conf",
+              "contents": "[Service]\nExecStart=\nExecStart=/usr/lib/coreos/flannel-wrapper $FLANNEL_OPTS \\\n  --etcd-endpoints=\"https://etcd.test.kz8s:2379\" \\\n  --etcd-cafile=\"/etc/kubernetes/ssl/ca.pem\" \\\n  --etcd-certfile=\"/etc/kubernetes/ssl/k8s-worker.pem\" \\\n  --etcd-keyfile=\"/etc/kubernetes/ssl/k8s-worker-key.pem\"\n"
+            }
+          ]
+        },
+        {
+          "name": "etcd-member.service",
+          "enable": true,
+          "dropins": [
+            {
+              "name": "01-wait-for-certs.conf",
+              "contents": "[Unit]\nAfter=create-certificate.service\nRequires=create-certificate.service\nConditionFileNotEmpty=/etc/kubernetes/ssl/ca.pem\nConditionFileNotEmpty=/etc/kubernetes/ssl/k8s-worker.pem\nConditionFileNotEmpty=/etc/kubernetes/ssl/k8s-worker-key.pem\n[Service]\nEnvironmentFile=/etc/tack-environment\n"
+            }
+          ]
+        },
+        {
+          "name": "etcd-member.service",
+          "enable": true,
+          "dropins": [
+            {
+              "name": "10-environment.conf",
+              "contents": "[Service]\nEnvironment=\"ETCD_SSL_DIR=/etc/kubernetes/ssl\"\nEnvironment=\"ETCD_CERT_FILE=/etc/ssl/certs/k8s-worker.pem\"\nEnvironment=\"ETCD_CLIENT_CERT_AUTH=TRUE\"\nEnvironment=\"ETCD_DISCOVERY_SRV=test.kz8s\"\nEnvironment=\"ETCD_KEY_FILE=/etc/ssl/certs/k8s-worker-key.pem\"\nEnvironment=\"ETCD_PEER_CERT_FILE=/etc/ssl/certs/k8s-worker.pem\"\nEnvironment=\"ETCD_PEER_CLIENT_AUTH=true\"\nEnvironment=\"ETCD_PEER_KEY_FILE=/etc/ssl/certs/k8s-worker-key.pem\"\nEnvironment=\"ETCD_PEER_TRUSTED_CA_FILE=/etc/ssl/certs/ca.pem\"\nEnvironment=\"ETCD_PROXY=on\"\nEnvironment=\"ETCD_TRUSTED_CA_FILE=/etc/ssl/certs/ca.pem\"\n"
+            }
+          ]
+        },
+        {
+          "name": "kubelet.service",
+          "enable": true,
+          "contents": "[Unit]\nConditionFileIsExecutable=/usr/lib/coreos/kubelet-wrapper\nConditionFileNotEmpty=/etc/kubernetes/ssl/k8s-worker.pem\nConditionFileNotEmpty=/etc/kubernetes/ssl/k8s-worker-key.pem\n\nAfter=flanneld.service\nRequires=flanneld.service\n\nAfter=prefetch-rkt-hyperkube.service\nAfter=prefetch-docker-hyperkube.service\n\n[Service]\nEnvironmentFile=/etc/environment\nEnvironmentFile=/etc/tack-environment\nEnvironment=\"KUBELET_ACI=${TACK_HYPERKUBE_IMAGE}\"\nEnvironment=\"KUBELET_VERSION=${TACK_HYPERKUBE_TAG}\"\nEnvironment=\"RKT_OPTS=\\\n  --volume dns,kind=host,source=/etc/resolv.conf \\\n  --mount volume=dns,target=/etc/resolv.conf \\\n  --volume rkt,kind=host,source=/opt/bin/host-rkt \\\n  --mount volume=rkt,target=/usr/bin/rkt \\\n  --volume var-lib-rkt,kind=host,source=/var/lib/rkt \\\n  --mount volume=var-lib-rkt,target=/var/lib/rkt \\\n  --volume stage,kind=host,source=/tmp \\\n  --mount volume=stage,target=/tmp \\\n  --volume var-log,kind=host,source=/var/log \\\n  --mount volume=var-log,target=/var/log\"\nExecStartPre=/usr/bin/env\nExecStartPre=/usr/bin/mkdir -p /var/log/containers\nExecStartPre=/usr/bin/mkdir -p /var/lib/kubelet\nExecStartPre=/usr/bin/mount --bind /var/lib/kubelet /var/lib/kubelet\nExecStartPre=/usr/bin/mount --make-shared /var/lib/kubelet\nExecStartPre=/usr/bin/systemctl is-active flanneld.service\nExecStartPre=/opt/bin/wait-for-apiserver\nExecStart=/usr/lib/coreos/kubelet-wrapper \\\n  --allow-privileged=true \\\n  --api-servers=https://master.${TACK_INTERNAL_TLD} \\\n  --cert-dir=/etc/kubernetes/ssl \\\n  --cloud-provider=aws \\\n  --cluster-dns=${TACK_CLUSTER_DNS} \\\n  --cluster-domain=${TACK_CLUSTER_DOMAIN} \\\n  --kubeconfig=/etc/kubernetes/kubeconfig.yml \\\n  --node-labels node-role.kubernetes.io/node \\\n  --pod-manifest-path=/etc/kubernetes/manifests \\\n  --register-node=true \\\n  --tls-cert-file=/etc/kubernetes/ssl/k8s-worker.pem \\\n  --tls-private-key-file=/etc/kubernetes/ssl/k8s-worker-key.pem\nRestart=always\nRestartSec=14\n\n[Install]\nWantedBy=multi-user.target\n"
+        }
+      ]
+    },
+    "networkd": {},
+    "passwd": {}
+  }
