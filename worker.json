@@ -180,7 +180,7 @@
         {
           "name": "prefetch-rkt-hyperkube.service",
           "enable": true,
-          "contents": "[Unit]\nAfter=network-online.target\nRequires=network-online.target\nDescription=Prefetch rkt Hyperkube\n\n[Service]\nType=oneshot\nRemainAfterExit=yes\nExecStartPre=/usr/bin/rkt trust --trust-keys-from-https --prefix=${TACK_HYPERKUBE_IMAGE}\nExecStart=/usr/bin/rkt fetch ${TACK_HYPERKUBE_IMAGE}:${TACK_HYPERKUBE_TAG}\n\n[Install]\nWantedBy=multi-user.target\n"
+          "contents": "[Unit]\nAfter=network-online.target\nRequires=network-online.target\nDescription=Prefetch rkt Hyperkube\n\n[Service]\nType=oneshot\nRemainAfterExit=yes\nEnvironmentFile=/etc/tack-environment\nExecStartPre=/usr/bin/rkt trust --trust-keys-from-https --prefix=${TACK_HYPERKUBE_IMAGE}\nExecStart=/usr/bin/rkt fetch ${TACK_HYPERKUBE_IMAGE}:${TACK_HYPERKUBE_TAG}\n"
         },
         {
           "name": "prefetch-docker-hyperkube.service",
