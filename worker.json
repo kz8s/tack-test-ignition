@@ -185,7 +185,7 @@
         {
           "name": "prefetch-docker-hyperkube.service",
           "enable": true,
-          "contents": "[Unit]\nAfter=docker.service\nRequires=docker.service\nDescription=Prefetch docker Hyperkube\n\n[Service]\nType=oneshot\nRemainAfterExit=yes\nExecStart=/usr/bin/docker pull ${TACK_HYPERKUBE_IMAGE}:${TACK_HYPERKUBE_TAG}\n\n[Install]\nWantedBy=multi-user.target\n"
+          "contents": "[Unit]\nAfter=docker.service\nRequires=docker.service\nDescription=Prefetch docker Hyperkube\n\n[Service]\nType=oneshot\nRemainAfterExit=yes\nEnvironmentFile=/etc/tack-environment\nExecStart=/usr/bin/docker pull ${TACK_HYPERKUBE_IMAGE}:${TACK_HYPERKUBE_TAG}\n\n[Install]\nWantedBy=multi-user.target\n"
         },
         {
           "name": "create-certificate.service",
